@@ -1,0 +1,12 @@
+git config --global user.email "cesar.tapia@itcc.com.pe"
+git config --global user.name "Cesar Augsuto Tapia Mori"
+
+git clone https://github.com/ITCC/bienestarysalud.git
+echo #bienestarysalud README.md
+cat > README.md
+git add README.md
+git commit -m "iniciando proyecto"
+git push -u origin master
+npm init
+bower init
+cat > .gitignore
