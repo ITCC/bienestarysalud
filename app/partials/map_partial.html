@@ -2,18 +2,21 @@
 	{{TituloModal}}
 </div>
 <div class="dialog-container">
+ 	Direcci&oacute;n: {{Direccion}}
 	<div id='map_canvas' style="width:400px; height:400px;"></div>
 </div>
 <input type="hidden" id="hdDireccion" value="{{Direccion}}">
+
 <script>
 
 function loadMap() {
-    var myLatlng = new google.maps.LatLng(20.68009, -101.35403);
+    var myLatlng = new google.maps.LatLng(-12.046374, -77.0427934);
     var myOptions = {
 	        zoom: 4,
 	        center: myLatlng,
 	        mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+
     map = new google.maps.Map($("#map_canvas").get(0), myOptions);
 }
 function loadMark() {
@@ -45,10 +48,6 @@ console.log(results)
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-
-         $('#latitude').text(results[0].geometry.location.lat());
-         $('#longitude').text(results[0].geometry.location.lng());
-
         map = new google.maps.Map($("#map_canvas").get(0), mapOptions);
 
         // fitBounds acercará el mapa con el zoom adecuado de acuerdo a lo buscado
@@ -67,7 +66,12 @@ console.log(results)
     }
 }
 
-loadMap();
-//gmaps_ads();
-loadMark();
+$(document).ready(function() {
+	    
+	loadMap();
+	setTimeout(function() {
+		loadMark();
+	}, 500);
+	//
+});
 </script>
