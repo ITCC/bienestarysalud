@@ -1,6 +1,6 @@
 (function(){
 
-	angular.module("bienestarysalud", ["ui.router", "bienestarysalud.controllers", "bienestarysalud.services", "bienestarysalud.factories"])
+	angular.module("bienestarysalud", ["ui.router", "bienestarysalud.controllers", "bienestarysalud.services", "bienestarysalud.factories", "bienestarysalud.directives"])
 	 	.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider){
 	 		$urlRouterProvider.otherwise("/home");
 

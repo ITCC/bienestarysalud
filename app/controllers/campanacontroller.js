@@ -17,7 +17,7 @@
 				$scope.resultDataVeterinaria = data;
 			});	
 
-			$scope.openNotify = function () {
+			/*$scope.openNotify = function () {
                var dialog = ngDialog.open({
                     template:
                         '<p>You can do whatever you want when I close, however that happens.</p>' +
@@ -27,7 +27,7 @@
                 dialog.closePromise.then(function (data) {
                     console.log('ngDialog closed' + (data.value === 1 ? ' using the button' : '') + ' and notified by promise: ' + data.id);
                 });
-            };			
+            };*/			
 		}]);
 
 })()
