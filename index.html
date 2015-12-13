@@ -9,17 +9,18 @@
 	<link rel="stylesheet" type="text/css" href="./bower_components/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./assets/css/site.css">
 </head>
-<body>
-	<div >
-		<div ui-view>
-			
-		</div>
+<body ng-class="classContainer">
+	<div ui-view>
+		
 	</div>
-
+	<nav class="navbar navbar-footer-bottom navbar-fixed-bottom hidden-xs" role="navigation">
+	<div class="container">
+        <p class="text-muted">Hackaton San Isidro 2015 - Copyright Team ITTCDev </p>
+      </div>
+	</nav>
 	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="./bower_components/angular/angular.min.js"></script>
-	<!--script src="./bower_components/angular-route/angular-route.min.js"></script-->
 	<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 	<script src="./app/factories/bsfactories.js"></script>
 	<script src="./app/services/bsservices.js"></script>

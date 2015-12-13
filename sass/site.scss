@@ -20,6 +20,11 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 		padding-top: 10px;
 	}
 }
+.box-container-title h1 {
+	margin: 0;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
 .box-container-info {
 	padding-bottom: 50px;
 }
@@ -29,11 +34,40 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 }
 .box-card-info {
 	padding: 5px;
-	border: 1px solid #eee;
+	//border: 1px solid #000;
 	margin-bottom: 10px;
+	border-radius: 5px;
+	//box-shadow: 2px 2px 5px 0 #000;
+	background-color: #fff;
+}
+
+.box-button-social a {
+	float: right;
+	padding: 2px;
+	&:hover {
+
+	}
 }
 
 @each $color in $colors-box {
+	.box-container-#{$color} {
+		background-color: colorSelect($color, light);
+		& .box-container-title {
+			background-color: colorSelect($color, dark);
+			color: colorSelect($color, text);
+		}
+
+		& .box-card-info {
+			border: 1px solid colorSelect($color);
+		}
+
+		& .navbar-footer-bottom {
+			background-color: colorSelect($color);
+			& .text-muted {
+				color: colorSelect($color, text);
+			} 
+		}
+	}
 	.box-menu-#{$color} {
 		background-color: colorSelect($color);
 		& a {
@@ -59,7 +93,11 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 	}
 }
 
-.navbar-menu-bottom {
+.navbar-menu-top {
+	font-size: 1.05em;
+}
+
+.navbar-menu-bottom, .navbar-menu-top {
 	& ul {
 		margin: 0;
 		& li { 
@@ -69,6 +107,7 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 		}
 	}
 	margin-bottom: 0;
+	border: 0;
 }
 
 $screen-sm-min:  "768px";
@@ -78,7 +117,19 @@ html {
 	    margin-bottom: 50px;
   	}
 }
+.navbar-nav {
+	@media (min-width: $screen-sm-min) {
+		float: none;
+	}
+}
 
+.navbar-footer-bottom {
+	height: 60px;
+	background-color: #f5f5f5;
+}
+.navbar-footer-bottom > .container p {
+	line-height: 60px;
+}
 
 //background-size: cover
 //background-attachment: fixed;
