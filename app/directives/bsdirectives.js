@@ -21,7 +21,7 @@
       };
     })
 
-    var starApp = angular.module('bienestarysalud.directives', []);
+    var starApp = angular.module('bienestarysalud.directives');
     starApp.controller('StarCtrl', ['$scope', function ($scope) {
         $scope.rating = 0;
         $scope.ratings = [{
