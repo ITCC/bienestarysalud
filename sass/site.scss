@@ -5,15 +5,23 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 
 .box-menu {
 	font-size: 1.2em;
+	width: 24%;
 	color: $box_text_color;
 	text-align: center;
 	font-weight: 500;
 	display: inline-block;
-	padding: 10px;
-	padding-bottom: 25px;
+	//padding: 10px;
+	//padding-bottom: 25px;
+	margin-bottom: 5px;
+
 	cursor: pointer;
 	& i {
 		color: $box_icon_color;
+	}
+
+	&:hover {
+		color: $box_text_color;
+		text-decoration: none;
 	}
 
 	& .box-menu-icon {
@@ -88,6 +96,19 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 		
 	}
 
+	.box-menu > .box-menu-#{$color}
+	{
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border-radius: 10px;
+
+		border: 2px solid colorSelect($color, dark);
+		box-shadow: inset 0 0 10px 0 colorSelect($color, dark);
+		&:hover {
+			background-color: colorSelect($color, dark);
+		}
+	}
+
 	.container .#{$color} {
 		background-color: colorSelect($color);
 	}
@@ -112,16 +133,23 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 
 $screen-sm-min:  "768px";
 
-html {
-	@media screen and (max-width: $screen-sm-min) {
+
+@media screen and (max-width: $screen-sm-min) {
+	html {
 	    margin-bottom: 50px;
   	}
+
+	.box-menu {
+		width: 49%;
+	}
 }
-.navbar-nav {
-	@media (min-width: $screen-sm-min) {
+
+@media (min-width: $screen-sm-min) {
+	.navbar-nav {
 		float: none;
 	}
 }
+
 
 .navbar-footer-bottom {
 	height: 60px;
