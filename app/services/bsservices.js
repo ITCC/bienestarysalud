@@ -51,6 +51,16 @@
 
             return deferred.promise;
 		}
+		
+		this.getRestauranteResult = function() {
+			var deferred = $q.defer();
+            datosAbiertosFactory.getRestauranteResult("")
+            .then(function(data) {
+                deferred.resolve(data);
+            })
+
+            return deferred.promise;
+		}
 	    /*var cartId = new Object();
 	    this.getCartId = function(){
 	        return cartId;
