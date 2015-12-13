@@ -3,7 +3,7 @@
 	angular.module("bienestarysalud.controllers")
 		.controller("TallerController", ["$scope", "DatosAbiertosService", "ngDialog", function ($scope, datosAbiertosService,ngDialog){
 			$scope.$root.classContainer = "box-container-blue"
-			$scope.$parent.TituloHeader = "Tallares";
+			$scope.$parent.TituloHeader = "Talleres";
 			$scope.resultDataTalleres = [];
 			
 			datosAbiertosService.getTallerResult()
