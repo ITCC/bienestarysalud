@@ -3,28 +3,30 @@
 </div>
 <div ng-repeat="data in resultDataTalleres" class="col-xs-12 box-card-info">
 	<div class="col-xs-12 col-md-6">
-		{{data[0]}} <br/>
+		{{data[0]}} 
 		{{data[1]}} <br/>PRECIO:  {{data[7]}}
 	</div>
+		
 	<div class="col-xs-12 col-md-6">
-		<span><i class="fa fa-fw fa-clock-o"></i>Horarios</span>
+		
+		<span><i class="fa fa-fw fa-clock-o"></i>Horarios</span>&nbsp;&nbsp;&nbsp;&nbsp;<a ng-click="openNotify()" class="btn btn-primary btn-xs" ><i class="fa fa-pencil fa-fw"></i>Comentarios</a><br/>
 		<div class="row">
 
-		<div class="col-xs-6" ng-if="data[2] != ''">
-		<i class="fa fa-fw fa-calendar"></i>LUNES: {{data[2]}}
-		</div>
-		<div class="col-xs-6" ng-if="data[3] != ''">
-		<i class="fa fa-fw fa-calendar"></i>MARTES: {{data[3]}}
-		</div>
-		<div class="col-xs-6" ng-if="data[4] != ''">
-		<i class="fa fa-fw fa-calendar"></i>MIERCOLES: {{data[4]}}
-		</div>
-		<div class="col-xs-6" ng-if="data[5] != ''">
-		<i class="fa fa-fw fa-calendar"></i>JUEVES: {{data[5]}}
-		</div>
-		<div class="col-xs-6" ng-if="data[6] != ''">
-		<i class="fa fa-fw fa-calendar"></i>VIERNES: {{data[6]}}
-		</div>
+			<div class="col-xs-6" ng-if="data[2] != ''">
+				<i class="fa fa-fw fa-calendar"></i>LUNES: {{data[2]}}
+			</div>
+			<div class="col-xs-6" ng-if="data[3] != ''">
+				<i class="fa fa-fw fa-calendar"></i>MARTES: {{data[3]}}
+			</div>
+			<div class="col-xs-6" ng-if="data[4] != ''">
+			<i class="fa fa-fw fa-calendar"></i>MIERCOLES: {{data[4]}}
+			</div>
+			<div class="col-xs-6" ng-if="data[5] != ''">
+			<i class="fa fa-fw fa-calendar"></i>JUEVES: {{data[5]}}
+			</div>
+			<div class="col-xs-6" ng-if="data[6] != ''">
+			<i class="fa fa-fw fa-calendar"></i>VIERNES: {{data[6]}}
+			</div>
 		</div>
 		
 	</div>
