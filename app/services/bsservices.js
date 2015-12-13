@@ -41,6 +41,16 @@
 
             return deferred.promise;
 		}
+
+		this.getTallerResult = function() {
+			var deferred = $q.defer();
+            datosAbiertosFactory.getTallerResult("")
+            .then(function(data) {
+                deferred.resolve(data);
+            })
+
+            return deferred.promise;
+		}
 	    /*var cartId = new Object();
 	    this.getCartId = function(){
 	        return cartId;

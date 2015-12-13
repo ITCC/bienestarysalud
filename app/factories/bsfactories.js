@@ -50,6 +50,18 @@
 	            });
 
 	            return deferred.promise;
+	        },
+	        getTallerResult: function(filters) {
+	            var deferred = $q.defer();
+	            $http.get('data/talleres.json',{header : {'Content-Type' : 'application/json; charset=UTF-8'}})
+	            .success(function(data, status, headers, config) {
+	                deferred.resolve(data);
+	            })
+	            .error(function(data, status, headers, config) {
+	                deferred.reject("error: " + status);
+	            });
+
+	            return deferred.promise;
 	        }
 	    };
 	}]);
