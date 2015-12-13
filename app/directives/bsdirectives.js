@@ -53,9 +53,8 @@
         }];
       }
       
-      $scope.sendRate = function(){
-        alert("Gracias por votar!\n\n " + $scope.ratings[0].current+"/"+$scope.ratings[0].max
-        +"\n"+" de "+ $scope.ratings[1].current+"/"+$scope.ratings[0].max)
+      $scope.sendRate = function(rating){
+
       }
     }]);
 
