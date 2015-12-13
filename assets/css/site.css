@@ -31,7 +31,7 @@
 }
 
 .box-card-info {
-  padding: 5px;
+  padding: 15px;
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: #fff;
@@ -48,9 +48,6 @@
 .box-container-white .box-container-title {
   background-color: #f2f2f2;
   color: #000;
-}
-.box-container-white .box-card-info {
-  border: 1px solid #fff;
 }
 .box-container-white .navbar-footer-bottom {
   background-color: #fff;
@@ -89,9 +86,6 @@
   background-color: #388E3C;
   color: #FFFFFF;
 }
-.box-container-green .box-card-info {
-  border: 1px solid #4CAF50;
-}
 .box-container-green .navbar-footer-bottom {
   background-color: #4CAF50;
 }
@@ -128,9 +122,6 @@
 .box-container-orange .box-container-title {
   background-color: #E64A19;
   color: #FFFFFF;
-}
-.box-container-orange .box-card-info {
-  border: 1px solid #FF5722;
 }
 .box-container-orange .navbar-footer-bottom {
   background-color: #FF5722;
@@ -169,9 +160,6 @@
   background-color: #1976D2;
   color: #FFFFFF;
 }
-.box-container-blue .box-card-info {
-  border: 1px solid #2196F3;
-}
 .box-container-blue .navbar-footer-bottom {
   background-color: #2196F3;
 }
@@ -208,9 +196,6 @@
 .box-container-red .box-container-title {
   background-color: #D32F2F;
   color: #FFFFFF;
-}
-.box-container-red .box-card-info {
-  border: 1px solid #F44336;
 }
 .box-container-red .navbar-footer-bottom {
   background-color: #F44336;

@@ -3,11 +3,13 @@
 	CAMPAÑAS DE SALUD
 </div>
 <div ng-repeat="data in resultDataSalud" class="col-xs-12 box-card-info">
+	<div class="row">
 	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
 	<div class="col-xs-12 col-md-6">
 	<i class="fa fa-fw fa-calendar"></i> {{data[3]}}
 	<i class="fa fa-fw fa-clock-o"></i> {{data[4]}}
-	</div>
+	</div>	
+	</div>	
 	<div class="row">
 	<div ng-if="data[6] != ''" class="col-xs-12 col-md-6">
 	<i class="fa fa-fw fa-map-marker"></i> {{data[6]}}	
