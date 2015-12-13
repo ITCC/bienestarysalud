@@ -2,8 +2,6 @@
 
 	angular.module("bienestarysalud", ["ui.router", "bienestarysalud.controllers", "bienestarysalud.services", "bienestarysalud.factories"])
 	 	.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider){
-	 		console.log($stateProvider)
-	 		console.log($urlRouterProvider)
 	 		$urlRouterProvider.otherwise("/home");
 
 	 		$stateProvider
@@ -23,17 +21,17 @@
 			    .state('info.campanas', {
 			      url: "/campanas",
 			      templateUrl: "./app/partials/campana_partial.html",
-			      controller: "BienestarySaludController"
+			      controller: "CampanaController"
 			    })
 			    .state('info.talleres', {
 			      url: "/talleres",
 			      templateUrl: "./app/partials/taller_partial.html",
-			      controller: "BienestarySaludController"
+			      controller: "TallerController"
 			    })
 			    .state('info.restaurantes', {
 			      url: "/restaurantes",
 			      templateUrl: "./app/partials/restaurante_partial.html",
-			      controller: "BienestarySaludController"
+			      controller: "RestauranteController"
 			    })
 	 	}]);
 /*

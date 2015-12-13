@@ -1,16 +1,55 @@
 (function() {
 
 	angular.module('bienestarysalud.factories', [])
-	.factory('DatosAbiertosFactory', ['$http', function($http){
+	.factory('DatosAbiertosFactory', ['$http', '$q', function($http, $q){
 	    return {
-	        getResult: function(filters) {
-	            var promise = $http.get('http://api.datosabiertos.msi.gob.pe/datastreams/invoke/JORNA-Y-CAMPA-SALUD?auth_key=c0a3345c3d03181a997d88cc62b8c1daba66a7d7&output=json_array&filter0=column2[==]FEBRERO')
+	    	getDiscapacitadosResult: function(filters) {
+	            var deferred = $q.defer();
+	            $http.get('data/discapacitados.json',{header : {'Content-Type' : 'application/json; charset=UTF-8'}})
 	            .success(function(data, status, headers, config) {
-	                return data.result;
+	                deferred.resolve(data);
 	            })
 	            .error(function(data, status, headers, config) {
-	                return "error: " + status;
+	                deferred.reject("error: " + status);
 	            });
+
+	            return deferred.promise;
+	        },
+	        getActividadesResult: function(filters) {
+	            var deferred = $q.defer();
+	            $http.get('data/actividades.json',{header : {'Content-Type' : 'application/json; charset=UTF-8'}})
+	            .success(function(data, status, headers, config) {
+	                deferred.resolve(data);
+	            })
+	            .error(function(data, status, headers, config) {
+	                deferred.reject("error: " + status);
+	            });
+
+	            return deferred.promise;
+	        },
+	        getSaludResult: function(filters) {
+	            var deferred = $q.defer();
+	            $http.get('data/salud.json',{header : {'Content-Type' : 'application/json; charset=UTF-8'}})
+	            .success(function(data, status, headers, config) {
+	                deferred.resolve(data);
+	            })
+	            .error(function(data, status, headers, config) {
+	                deferred.reject("error: " + status);
+	            });
+
+	            return deferred.promise;
+	        },
+	        getVeterinariaResult: function(filters) {
+	            var deferred = $q.defer();
+	            $http.get('data/veterinaria.json',{header : {'Content-Type' : 'application/json; charset=UTF-8'}})
+	            .success(function(data, status, headers, config) {
+	                deferred.resolve(data);
+	            })
+	            .error(function(data, status, headers, config) {
+	                deferred.reject("error: " + status);
+	            });
+
+	            return deferred.promise;
 	        }
 	    };
 	}]);

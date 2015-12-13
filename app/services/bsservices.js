@@ -1,9 +1,45 @@
 (function() {
 
 	angular.module('bienestarysalud.services', [])
-	.service('DatosAbiertosService', ['DatosAbiertosFactory', function(datosAbiertosFactory) {
-		this.getResult = function() {
-			return datosAbiertosFactory.getResult("");
+	.service('DatosAbiertosService', ['$q','DatosAbiertosFactory', function($q, datosAbiertosFactory) {
+		this.getDiscapacitadosResult = function() {
+			var deferred = $q.defer();
+            datosAbiertosFactory.getDiscapacitadosResult("")
+            .then(function(data) {
+                deferred.resolve(data);
+            })
+
+            return deferred.promise;
+		}
+
+		this.getActividadesResult = function() {
+			var deferred = $q.defer();
+            datosAbiertosFactory.getActividadesResult("")
+            .then(function(data) {
+                deferred.resolve(data);
+            })
+
+            return deferred.promise;
+		}
+
+		this.getSaludResult = function() {
+			var deferred = $q.defer();
+            datosAbiertosFactory.getSaludResult("")
+            .then(function(data) {
+                deferred.resolve(data);
+            })
+
+            return deferred.promise;
+		}
+
+		this.getVeterinariaResult = function() {
+			var deferred = $q.defer();
+            datosAbiertosFactory.getVeterinariaResult("")
+            .then(function(data) {
+                deferred.resolve(data);
+            })
+
+            return deferred.promise;
 		}
 	    /*var cartId = new Object();
 	    this.getCartId = function(){
