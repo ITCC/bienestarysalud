@@ -1,0 +1,78 @@
+@import 'color';
+@import 'functions';
+
+$colors-box: ('white', 'green', 'orange', 'blue', 'red');
+
+.box-menu {
+	font-size: 1.2em;
+	color: $box_text_color;
+	text-align: center;
+	font-weight: 500;
+	display: inline-block;
+	padding: 10px;
+	padding-bottom: 25px;
+	cursor: pointer;
+	& i {
+		color: $box_icon_color;
+	}
+
+	& .box-menu-icon {
+		padding-top: 10px;
+	}
+}
+.box-container-info {
+	padding-bottom: 50px;
+}
+.box-subtitle {
+	margin-bottom: 10px;
+}
+.box-card-info {
+	padding: 5px;
+	border: 1px solid #eee;
+	margin-bottom: 5px;
+}
+
+@each $color in $colors-box {
+	.box-menu-#{$color} {
+		background-color: colorSelect($color);
+		& a {
+			color: colorSelect($color, text);
+			&:hover {
+				background-color: colorSelect($color, dark) !important;
+			}
+			&:active {
+				background-color: colorSelect($color, dark) !important;
+			}
+		}
+		
+	}
+
+	.container .#{$color} {
+		background-color: colorSelect($color);
+	}
+}
+
+.navbar-menu-bottom {
+	& ul {
+		margin: 0;
+		& li { 
+			float: left;
+			width: 20%;
+			text-align: center;
+		}
+	}
+	margin-bottom: 0;
+}
+
+$screen-sm-min:  "768px";
+
+html {
+	@media screen and (max-width: $screen-sm-min) {
+	    margin-bottom: 50px;
+  	}
+}
+
+
+//background-size: cover
+//background-attachment: fixed;
+//background-image: url()

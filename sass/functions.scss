@@ -1,0 +1,3 @@
+@function colorSelect($color, $tone: 'base') {
+    @return map-get(map-get($color-collection, $color), $tone);
+}

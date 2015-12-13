@@ -1,0 +1,135 @@
+.box-menu {
+  font-size: 1.2em;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 25px;
+  cursor: pointer;
+}
+.box-menu i {
+  color: #FFFFFF;
+}
+.box-menu .box-menu-icon {
+  padding-top: 10px;
+}
+
+.box-container-info {
+  padding-bottom: 50px;
+}
+
+.box-subtitle {
+  margin-bottom: 10px;
+}
+
+.box-card-info {
+  padding: 5px;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.box-menu-white {
+  background-color: #fff;
+}
+.box-menu-white a {
+  color: #000;
+}
+.box-menu-white a:hover {
+  background-color: #f2f2f2 !important;
+}
+.box-menu-white a:active {
+  background-color: #f2f2f2 !important;
+}
+
+.container .white {
+  background-color: #fff;
+}
+
+.box-menu-green {
+  background-color: #4CAF50;
+}
+.box-menu-green a {
+  color: #FFFFFF;
+}
+.box-menu-green a:hover {
+  background-color: #388E3C !important;
+}
+.box-menu-green a:active {
+  background-color: #388E3C !important;
+}
+
+.container .green {
+  background-color: #4CAF50;
+}
+
+.box-menu-orange {
+  background-color: #FF5722;
+}
+.box-menu-orange a {
+  color: #FFFFFF;
+}
+.box-menu-orange a:hover {
+  background-color: #E64A19 !important;
+}
+.box-menu-orange a:active {
+  background-color: #E64A19 !important;
+}
+
+.container .orange {
+  background-color: #FF5722;
+}
+
+.box-menu-blue {
+  background-color: #2196F3;
+}
+.box-menu-blue a {
+  color: #FFFFFF;
+}
+.box-menu-blue a:hover {
+  background-color: #1976D2 !important;
+}
+.box-menu-blue a:active {
+  background-color: #1976D2 !important;
+}
+
+.container .blue {
+  background-color: #2196F3;
+}
+
+.box-menu-red {
+  background-color: #F44336;
+}
+.box-menu-red a {
+  color: #FFFFFF;
+}
+.box-menu-red a:hover {
+  background-color: #D32F2F !important;
+}
+.box-menu-red a:active {
+  background-color: #D32F2F !important;
+}
+
+.container .red {
+  background-color: #F44336;
+}
+
+.navbar-menu-bottom {
+  margin-bottom: 0;
+}
+.navbar-menu-bottom ul {
+  margin: 0;
+}
+.navbar-menu-bottom ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    margin-bottom: 50px;
+  }
+}
+
+/*# sourceMappingURL=site.css.map */
