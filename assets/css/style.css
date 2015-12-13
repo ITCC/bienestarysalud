@@ -22,6 +22,12 @@ ul.rating {
   margin-top:20px;
 }
 
+<!-- CSS -->
+<style>
+  .accordion-toggle {cursor: pointer;}
+  .accordion-content {display: none;}
+  .accordion-content.default {display: block;}
+</style>
 
 /*Acordeon con cambio de estado con base de Bootstrap */
 
