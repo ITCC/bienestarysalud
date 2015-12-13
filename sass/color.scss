@@ -1,0 +1,61 @@
+//variables de color
+
+$green_dark_primary: #388E3C;
+$green_primary: #4CAF50;
+$green_light_primary: #C8E6C9;
+$green_icon_color: #FFFFFF;
+
+$orange_dark_primary: #E64A19;
+$orange_primary: #FF5722;
+$orange_light_primary: #FFCCBC;
+$orange_icon_color: #FFFFFF;
+
+$blue_dark_primary: #1976D2;
+$blue_primary: #2196F3;
+$blue_light_primary: #BBDEFB;
+$blue_icon_color: #FFFFFF;
+
+$red_dark_primary: #D32F2F;
+$red_primary: #F44336;
+$red_light_primary: #FFCDD2;
+$red_icon_color: #FFFFFF;
+
+$primary_text: #212121;
+$secunday_text1: #727272;
+$divider_color: #B6B6B6;
+
+$box_text_color: #FFFFFF;
+$box_icon_color: #FFFFFF;
+
+$color-collection: (
+    'white': (
+        base: #fff,
+        light: #fff,
+        dark: darken(#fff, 5),
+        text:  #000
+    ),
+    'green': (
+        base:  $green_primary,
+        light: $green_light_primary,
+        dark:  $green_dark_primary,
+        text:  $box_text_color
+    ),
+    'orange': (
+        base:  $orange_primary,
+        light: $orange_light_primary,
+        dark:  $orange_dark_primary,
+        text:  $box_text_color
+    ),
+    'blue': (
+        base:  $blue_primary,
+        light: $blue_light_primary,
+        dark:  $blue_dark_primary,
+        text:  $box_text_color
+    ),
+    'red': (
+        base:  $red_primary,
+        light: $red_light_primary,
+        dark:  $red_dark_primary,
+        text:  $box_text_color
+    )
+);
