@@ -20,13 +20,14 @@
 }
 
 .box-subtitle {
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .box-card-info {
   padding: 5px;
   border: 1px solid #eee;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .box-menu-white {
@@ -39,6 +40,12 @@
   background-color: #f2f2f2 !important;
 }
 .box-menu-white a:active {
+  background-color: #f2f2f2 !important;
+}
+.box-menu-white a:visited {
+  background-color: #f2f2f2 !important;
+}
+.box-menu-white.active {
   background-color: #f2f2f2 !important;
 }
 
@@ -58,6 +65,12 @@
 .box-menu-green a:active {
   background-color: #388E3C !important;
 }
+.box-menu-green a:visited {
+  background-color: #388E3C !important;
+}
+.box-menu-green.active {
+  background-color: #388E3C !important;
+}
 
 .container .green {
   background-color: #4CAF50;
@@ -73,6 +86,12 @@
   background-color: #E64A19 !important;
 }
 .box-menu-orange a:active {
+  background-color: #E64A19 !important;
+}
+.box-menu-orange a:visited {
+  background-color: #E64A19 !important;
+}
+.box-menu-orange.active {
   background-color: #E64A19 !important;
 }
 
@@ -92,6 +111,12 @@
 .box-menu-blue a:active {
   background-color: #1976D2 !important;
 }
+.box-menu-blue a:visited {
+  background-color: #1976D2 !important;
+}
+.box-menu-blue.active {
+  background-color: #1976D2 !important;
+}
 
 .container .blue {
   background-color: #2196F3;
@@ -107,6 +132,12 @@
   background-color: #D32F2F !important;
 }
 .box-menu-red a:active {
+  background-color: #D32F2F !important;
+}
+.box-menu-red a:visited {
+  background-color: #D32F2F !important;
+}
+.box-menu-red.active {
   background-color: #D32F2F !important;
 }
 

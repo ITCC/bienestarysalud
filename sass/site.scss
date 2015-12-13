@@ -24,12 +24,13 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 	padding-bottom: 50px;
 }
 .box-subtitle {
-	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 .box-card-info {
 	padding: 5px;
 	border: 1px solid #eee;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 @each $color in $colors-box {
@@ -43,6 +44,12 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 			&:active {
 				background-color: colorSelect($color, dark) !important;
 			}
+			&:visited {
+				background-color: colorSelect($color, dark) !important;
+			}
+		}
+		&.active {
+			background-color: colorSelect($color, dark) !important;
 		}
 		
 	}
