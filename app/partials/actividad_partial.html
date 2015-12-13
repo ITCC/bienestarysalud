@@ -1,22 +1,36 @@
-<div class="navbar-header col-xs-12 box-subtitle">
+<div class="box-subtitle">
 	ACTIVIDADES GRATUITAS
 </div>
 <div ng-repeat="data in resultDataActividades" class="col-xs-12 box-card-info">
+	<div class="row">
 	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
 	<div class="col-xs-12 col-md-6">
 	<i class="fa fa-fw fa-calendar"></i> {{data[3]}}
 	<i class="fa fa-fw fa-clock-o"></i> {{data[4]}}
 	</div>
-	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
+	</div>
+	<div class="row">
+	<div ng-if="data[6] != ''" class="col-xs-12 col-md-6">
+	<i class="fa fa-fw fa-map-marker"></i> {{data[6]}}
+	</div>
+	<div ng-if="data[5] != ''"  class="col-xs-12 col-md-6">{{data[5]}}</div>
+	</div>
 </div>
-<div class="navbar-header col-xs-12 box-subtitle">
+<div class="box-subtitle">
 	ACTIVIDADES ATENCION A LA PERSONA CON DISCAPACIDAD
 </div>
 <div ng-repeat="data in resultDataDiscapacitados" class="col-xs-12 box-card-info">
+	<div class="row">
 	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
 	<div class="col-xs-12 col-md-6">
 	<i class="fa fa-fw fa-calendar"></i> {{data[3]}}
 	<i class="fa fa-fw fa-clock-o"></i> {{data[4]}}
 	</div>
-	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
+	</div>
+	<div class="row">
+	<div ng-if="data[5] != ''" class="col-xs-12 col-md-6">
+	<i class="fa fa-fw fa-map-marker"></i> {{data[5]}}
+	</div>
+	<div ng-if="data[4] != ''"  class="col-xs-12 col-md-6">{{data[4]}}</div>
+	</div>
 </div>
