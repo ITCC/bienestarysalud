@@ -25,6 +25,16 @@
 			<a href="#"><i class="fa fa-fw fa-twitter"></i></a>
 		</div>
 	</div>
+
+	<div class="row">
+		<div ng-controller="StarCtrl"> 
+		    <div class=col-md-12>
+		        <div ng-repeat="rating in ratings">
+		            <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="sendRate(rating)"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>		
 </div>
 <div class="box-subtitle">
 	ACTIVIDADES ATENCION A LA PERSONA CON DISCAPACIDAD
@@ -45,4 +55,14 @@
 	<i class="fa fa-fw fa-location-arrow"></i> {{data[4]}}
 	</div>
 	</div>
+
+	<div class="row">
+		<div ng-controller="StarCtrl"> 
+		    <div class=col-md-12>
+		        <div ng-repeat="rating in ratings">
+		            <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="sendRate(rating)"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>	
 </div>
