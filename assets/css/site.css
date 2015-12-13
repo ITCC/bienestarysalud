@@ -82,6 +82,18 @@
 .box-menu-white.active {
   background-color: #f2f2f2 !important;
 }
+.box-menu-white.active > .arrow-down {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-top-width: 0px;
+  border-color: transparent transparent #f2f2f2 transparent;
+  margin: -8px 0 0 0;
+  left: 45%;
+  top: 0;
+}
 
 .box-menu > .box-menu-white {
   padding-top: 25px;
@@ -129,6 +141,18 @@
 }
 .box-menu-green.active {
   background-color: #689F38 !important;
+}
+.box-menu-green.active > .arrow-down {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-top-width: 0px;
+  border-color: transparent transparent #689F38 transparent;
+  margin: -8px 0 0 0;
+  left: 45%;
+  top: 0;
 }
 
 .box-menu > .box-menu-green {
@@ -178,6 +202,18 @@
 .box-menu-orange.active {
   background-color: #F57C00 !important;
 }
+.box-menu-orange.active > .arrow-down {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-top-width: 0px;
+  border-color: transparent transparent #F57C00 transparent;
+  margin: -8px 0 0 0;
+  left: 45%;
+  top: 0;
+}
 
 .box-menu > .box-menu-orange {
   padding-top: 25px;
@@ -226,6 +262,18 @@
 .box-menu-blue.active {
   background-color: #0288D1 !important;
 }
+.box-menu-blue.active > .arrow-down {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-top-width: 0px;
+  border-color: transparent transparent #0288D1 transparent;
+  margin: -8px 0 0 0;
+  left: 45%;
+  top: 0;
+}
 
 .box-menu > .box-menu-blue {
   padding-top: 25px;
@@ -273,6 +321,18 @@
 }
 .box-menu-red.active {
   background-color: #C2185B !important;
+}
+.box-menu-red.active > .arrow-down {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-top-width: 0px;
+  border-color: transparent transparent #C2185B transparent;
+  margin: -8px 0 0 0;
+  left: 45%;
+  top: 0;
 }
 
 .box-menu > .box-menu-red {
