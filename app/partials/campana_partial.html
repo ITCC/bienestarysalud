@@ -1,10 +1,28 @@
 <div id="accordion">
+<div>
+Mes:
+<select ng-model="filterMonth">
+<option value="ENERO">ENERO</option>
+<option value="FEBRERO">FEBRERO</option>
+<option value="MARZO">MARZO</option>
+<option value="ABRIL">ABRIL</option>
+<option value="MAYO">MAYO</option>
+<option value="JUNIO">JUNIO</option>
+<option value="JULIO">JULIO</option>
+<option value="AGOSTO">AGOSTO</option>
+<option value="SETIEMBRE">SETIEMBRE</option>
+<option value="OCTUBRE">OCTUBRE</option>
+<option value="NOVIEMBRE">NOVIEMBRE</option>
+<option value="DICIEMBRE">DICIEMBRE</option>
+</select>
+</div>
   <h4 class="accordion-toggle"><div class="navbar-header col-xs-12 box-subtitle">
 	CAMPAÑAS DE SALUD <i class="fa fa-fw fa-arrow-down"></i>
+		<span  class="label label-primary"> {{filtered.length}} Registros</span>
 </div>
 </h4>
   <div class="accordion-content default">
-<div ng-repeat="data in resultDataSalud" class="col-xs-12 box-card-info">
+<div ng-repeat="data in filtered = (resultDataSalud | filter: filterMonth)" class="col-xs-12 box-card-info">
 	<div class="row">
 	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
 	<div class="col-xs-12 col-md-6">
@@ -31,15 +49,34 @@
 </div>
 
   </div>
+  <div>
+Mes:
+<select ng-model="filterMonth2">
+<option value="ENERO">ENERO</option>
+<option value="FEBRERO">FEBRERO</option>
+<option value="MARZO">MARZO</option>
+<option value="ABRIL">ABRIL</option>
+<option value="MAYO">MAYO</option>
+<option value="JUNIO">JUNIO</option>
+<option value="JULIO">JULIO</option>
+<option value="AGOSTO">AGOSTO</option>
+<option value="SETIEMBRE">SETIEMBRE</option>
+<option value="OCTUBRE">OCTUBRE</option>
+<option value="NOVIEMBRE">NOVIEMBRE</option>
+<option value="DICIEMBRE">DICIEMBRE</option>
+</select>
+</div>
   <h4 class="accordion-toggle"><div class="navbar-header col-xs-12 box-subtitle">
-	CAMPAÑAS DE MASCOTA <i class="fa fa-fw fa-arrow-down"></i>
+	CAMPAÑAS DE MASCOTA <i class="fa fa-fw fa-arrow-down"></i><span  class="label label-primary"> {{filtered2.length}} Registros</span>
 </div></h4>
   <div class="accordion-content">
-    <div ng-repeat="data in resultDataVeterinaria" class="col-xs-12 box-card-info">
+    <div ng-repeat="data in filtered2 = (resultDataVeterinaria | filter: filterMonth2)" class="col-xs-12 box-card-info">
+	<div class="row">
 	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
 	<div class="col-xs-12 col-md-6">
 	<i class="fa fa-fw fa-calendar"></i> {{data[3]}}
 	<i class="fa fa-fw fa-clock-o"></i> {{data[4]}}
+	</div>
 	</div>
 	<div class="row">
 	<div ng-if="data[6] != ''" class="col-xs-12 col-md-6">

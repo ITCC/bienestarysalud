@@ -1,6 +1,9 @@
 (function(){
 
-	angular.module("bienestarysalud.controllers", ["ngDialog"]);
+	angular.module("bienestarysalud.controllers", ["ngDialog"])
+		.constant("appConstant", {
+			"Meses": ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SETIEMPRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"]
+		});
 		/*.controller("ActividadController", ["$scope", "DatosAbiertosService", function ($scope, datosAbiertosService){
 			$scope.$parent.TituloHeader = "Actividades";
 			$scope.resultDataActividades = [];

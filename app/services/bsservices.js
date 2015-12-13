@@ -1,7 +1,9 @@
 (function() {
 
 	angular.module('bienestarysalud.services', [])
-	.service('DatosAbiertosService', ['$q','DatosAbiertosFactory', function($q, datosAbiertosFactory) {
+	.service('DatosAbiertosService', ['$q','$filter','DatosAbiertosFactory', function($q, $filter, datosAbiertosFactory) {
+		var normalize = $filter('normalize');
+
 		this.getDiscapacitadosResult = function() {
 			var deferred = $q.defer();
             datosAbiertosFactory.getDiscapacitadosResult("")
@@ -12,10 +14,16 @@
             return deferred.promise;
 		}
 
-		this.getActividadesResult = function() {
+		this.getActividadesResult = function(month) {
 			var deferred = $q.defer();
             datosAbiertosFactory.getActividadesResult("")
             .then(function(data) {
+            	//console.log(data)
+            	/*var results = data.filter(function (actividad) {
+            		//console.log(actividad[2])
+		            return actividad[2] === month;
+		         });*/
+            	//console.log(results)
                 deferred.resolve(data);
             })
 

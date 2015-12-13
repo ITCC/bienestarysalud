@@ -1,9 +1,12 @@
 (function(){
 
 	angular.module("bienestarysalud.controllers")
-		.controller("CampanaController", ["$scope", "DatosAbiertosService", "ngDialog", function ($scope, datosAbiertosService, ngDialog){
+		.controller("CampanaController", ["$scope", "DatosAbiertosService", "ngDialog", "appConstant", function ($scope, datosAbiertosService, ngDialog, appConstant){
+			var date = new Date();
 			$scope.$root.classContainer = "box-container-orange"
 			$scope.$parent.TituloHeader = "Campañas";
+			$scope.filterMonth = appConstant.Meses[date.getMonth()];
+			$scope.filterMonth2 = appConstant.Meses[date.getMonth()];
 			$scope.resultDataSalud = [];
 			$scope.resultDataVeterinaria = [];
 

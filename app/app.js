@@ -1,6 +1,9 @@
 (function(){
-
-	angular.module("bienestarysalud", ["ui.router", "bienestarysalud.controllers", "bienestarysalud.services", "bienestarysalud.factories", "bienestarysalud.directives"])
+	'use strict';
+	angular.module("bienestarysalud", ["ui.router", "bienestarysalud.controllers", "bienestarysalud.services", "bienestarysalud.factories", "bienestarysalud.directives", "bienestarysalud.filters"])
+		.constant("appConstant", {
+			"Meses": ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SETIEMPRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"]
+		})
 	 	.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider){
 	 		$urlRouterProvider.otherwise("/home");
 
