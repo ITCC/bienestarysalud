@@ -17,6 +17,15 @@
 	</div>
 	<div ng-if="data[5] != ''"  class="col-xs-12 col-md-6">{{data[5]}}</div>
 	</div>
+	<div class="row">
+		<div ng-controller="StarCtrl"> 
+		    <div class=col-md-12>
+		        <div ng-repeat="rating in ratings">
+		            <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="sendRate(rating)"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>	
 </div>
 <div class="navbar-header col-xs-12 box-subtitle">
 	CAMPAÑAS DE MASCOTA
@@ -30,8 +39,18 @@
 	<div class="row">
 	<div ng-if="data[6] != ''" class="col-xs-12 col-md-6">
 	<i class="fa fa-fw fa-map-marker"></i> {{data[6]}}
-	<a ng-click="open()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>View Map</a>
+	<link-view-map></link-view-map>
 	</div>
 	<div ng-if="data[5] != ''"  class="col-xs-12 col-md-6">{{data[5]}}</div>
 	</div>
+	<div class="row">
+		<div ng-controller="StarCtrl"> 
+		    <div class=col-md-12>
+		        <div ng-repeat="rating in ratings">
+		            <div star-rating rating-value="rating.current" max="rating.max" on-rating-selected="sendRate(rating)"></div>
+		        </div>
+		    </div>
+		</div>
+	</div>	
 </div>
+
