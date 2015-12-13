@@ -1,6 +1,6 @@
 (function(){
 
-	angular.module("bienestarysalud.controllers", []);
+	angular.module("bienestarysalud.controllers", ["ngDialog"]);
 		/*.controller("ActividadController", ["$scope", "DatosAbiertosService", function ($scope, datosAbiertosService){
 			$scope.$parent.TituloHeader = "Actividades";
 			$scope.resultDataActividades = [];
