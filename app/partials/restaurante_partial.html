@@ -1,21 +1,22 @@
-
 <div class="navbar-header col-xs-12 box-subtitle">
 	RESTAURANTES SALUDABLES
 </div>
 <div ng-repeat="data in resultDataRestaurante" class="col-xs-12 box-card-info">
-	<div class="row">
-	<div class="col-xs-12 col-md-6">{{data[1]}}</div>
 	<div class="col-xs-12 col-md-6">
-	<i class="fa fa-fw fa-calendar"></i> {{data[3]}}
-	<i class="fa fa-fw fa-clock-o"></i> {{data[4]}}
-	</div>	
+		<i class="fa fa-fw fa-building"></i>{{data[1]}}
+		<i class="fa fa-fw fa-navicon"></i> {{data[4]}}
 	</div>
-	
+	<div class="col-xs-12 col-md-6">
+	<i class="fa fa-fw fa-male"></i> {{data[2]}}
+	<i class="fa fa-fw fa-check"></i> {{data[3]}}
+	</div>
 	<div class="row">
 	<div ng-if="data[6] != ''" class="col-xs-12 col-md-6">
-	<i class="fa fa-fw fa-map-marker"></i> {{data[6]}}	
-	<a ng-click="open()"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>View Map</a>
+	<i class="fa fa-fw fa-map-marker"></i> {{data[7]}}	
+	<a ng-click="open({{data[7]}})"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>View Map</a>
 	</div>
-	<div ng-if="data[5] != ''"  class="col-xs-12 col-md-6">{{data[5]}}</div>
+	<div class="col-xs-12 col-md-6">
+	<i class="fa fa-fw fa-phone"></i> {{data[6]}}
+	</div>
 	</div>
 </div>
