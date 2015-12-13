@@ -54,7 +54,6 @@
       }
       
       $scope.sendRate = function(rating){
-
       }
     }]);
 
