@@ -7,7 +7,7 @@
 			$scope.$parent.TituloHeader = "Actividades";
 			$scope.filterMonth = appConstant.Meses[date.getMonth()];
 			$scope.filterMonth2 = appConstant.Meses[date.getMonth()];
-			console.log($scope.filterMonth)
+			
 			$scope.resultDataActividades = [];
 			$scope.resultDataDiscapacitados = [];
 

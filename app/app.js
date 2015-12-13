@@ -11,9 +11,10 @@
 			    .state('home', {
 			      url: "/home",
 			      templateUrl: "./app/partials/home_partial.html",
-			      controller: function($scope) {
+			      controller: "HomeController"
+			      /*controller: function($scope) {
 			      	$scope.$root.classContainer = "box-container-white"
-			      }
+			      }*/
 			    })
 			    .state('info', {
 			      url: "/info",
