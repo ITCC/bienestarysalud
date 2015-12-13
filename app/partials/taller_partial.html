@@ -1,20 +1,23 @@
 <div ng-repeat="data in resultDataTalleres" class="col-xs-12 box-card-info">
-	<div class="col-xs-12 col-md-6">{{data[0]}}</div>
 	<div class="col-xs-12 col-md-6">
-		<i class="fa fa-fw fa-calendar"></i> LUNES
-		<i class="fa fa-fw fa-clock-o"></i> {{data[2]}}
-		
-		<i class="fa fa-fw fa-calendar"></i> MARTES
-		<i class="fa fa-fw fa-clock-o"></i> {{data[3]}}<br>
+		{{data[0]}} <br/>
+		{{data[1]}} <br/>PRECIO  {{data[7]}}
 	</div>
-	<div class="col-xs-12 col-md-6">{{data[1]}} <br/>PRECIO  {{data[7]}}</div>
-	<div class="col-xs-12 col-md-6"></div>
 	<div class="col-xs-12 col-md-6">
-		<i class="fa fa-fw fa-calendar"></i> MIERCOLES
-		<i class="fa fa-fw fa-clock-o"></i> {{data[4]}}
-		<i class="fa fa-fw fa-calendar"></i> JUEVES
-		<i class="fa fa-fw fa-clock-o"></i> {{data[5]}}<br/>
-		<i class="fa fa-fw fa-calendar"></i> VIERNES
-		<i class="fa fa-fw fa-clock-o"></i> {{data[6]}}
-	</div>	
+	
+			<i class="fa fa-fw fa-calendar" ng-if="data[2] != ''"></i><span ng-if="data[2] != ''">LUNES</span>
+			<i class="fa fa-fw fa-clock-o" ng-if="data[2] != ''"></i><span ng-if="data[2] != ''">{{data[2]}}</span><br ng-if="data[2] != ''"/>
+		
+		<i class="fa fa-fw fa-calendar"ng-if="data[3] != ''"></i><span ng-if="data[3] != ''">MARTES</span>
+		<i class="fa fa-fw fa-clock-o"ng-if="data[3] != ''"></i><span ng-if="data[3] != ''">{{data[3]}}</span><br ng-if="data[3] != ''"/>
+		
+		<i class="fa fa-fw fa-calendar" ng-if="data[4] != ''"></i><span ng-if="data[4] != ''">MIERCOLES</span>
+		<i class="fa fa-fw fa-clock-o" ng-if="data[4] != ''"></i><span ng-if="data[4] != ''">{{data[4]}}</span><br ng-if="data[4] != ''"/>
+		
+		<i class="fa fa-fw fa-calendar" ng-if="data[5] != ''"></i><span ng-if="data[5] != ''">JUEVES</span>
+		<i class="fa fa-fw fa-clock-o" ng-if="data[5] != ''"></i><span ng-if="data[5] != ''">{{data[5]}}</span><br ng-if="data[5] != ''"/>
+		
+		<i class="fa fa-fw fa-calendar" ng-if="data[6] != ''"></i><span ng-if="data[6] != ''">VIERNES</span>
+		<i class="fa fa-fw fa-clock-o" ng-if="data[6] != ''"></i><span ng-if="data[6] != ''">{{data[6]}}</span>
+	</div>
 </div>
