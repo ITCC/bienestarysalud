@@ -1,3 +1,7 @@
+html {
+  margin-top: 60px;
+}
+
 .box-menu {
   font-size: 1.2em;
   width: 24%;
@@ -352,6 +356,7 @@
 
 .navbar-menu-top {
   font-size: 1.05em;
+  margin-top: 60px;
 }
 
 .navbar-menu-bottom, .navbar-menu-top {
@@ -368,15 +373,15 @@
 }
 
 @media screen and (max-width: 768px) {
-  html {
-    margin-bottom: 50px;
-  }
-
   .box-menu {
     width: 49%;
   }
 }
 @media (min-width: 768px) {
+  html {
+    margin-top: 100px;
+  }
+
   .navbar-nav {
     float: none;
   }

@@ -3,6 +3,10 @@
 
 $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 
+html {
+	    margin-top: 60px;
+  	}
+
 .box-menu {
 	font-size: 1.2em;
 	width: 24%;
@@ -131,6 +135,7 @@ $colors-box: ('white', 'green', 'orange', 'blue', 'red');
 
 .navbar-menu-top {
 	font-size: 1.05em;
+	margin-top: 60px;
 }
 
 .navbar-menu-bottom, .navbar-menu-top {
@@ -150,9 +155,7 @@ $screen-sm-min:  "768px";
 
 
 @media screen and (max-width: $screen-sm-min) {
-	html {
-	    margin-bottom: 50px;
-  	}
+	
 
 	.box-menu {
 		width: 49%;
@@ -160,6 +163,9 @@ $screen-sm-min:  "768px";
 }
 
 @media (min-width: $screen-sm-min) {
+	html {
+	    margin-top: 100px;
+  	}
 	.navbar-nav {
 		float: none;
 	}
