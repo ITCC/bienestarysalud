@@ -1,6 +1,28 @@
 (function(){
 
 	angular.module("bienestarysalud.controllers", [])
+		.controller("BienestarySaludController", ["$scope", "DatosAbiertosService", function ($scope, datosAbiertosService){
+			//console.log($routeParams);
+			//console.log($scope)
+			$scope.$parent.TituloHeader = "Bienestar Y Salud";
+			$scope.headerData = ["N°","JORNADA / CAMPAÑA","MES","FECHA","HORA","LUGAR","DIRECCION","SERVICIOS A BRINDAR","SEC"];
+			$scope.resultData = [];
+			//$scope.resultData = [];
+			if ($routeParams.type != undefined)
+			{
+				$scope.restulData = datosAbiertosService.getSaludResult();
+			}
+
+			/*$scope.saveContacto = function() {
+				$scope.contacts.push($scope.currentContacto);
+				document.location = "#contactos";
+				//console.log(JSON.stringify($scope.currentContacto));
+			};
+
+			$scope.eliminarContacto = function(index) {
+				$scope.contacts.splice(index,1);
+			}*/
+		}])
 		.controller("ActividadController", ["$scope", "DatosAbiertosService", function ($scope, datosAbiertosService){
 			$scope.$parent.TituloHeader = "Actividades";
 			$scope.resultDataActividades = [];
